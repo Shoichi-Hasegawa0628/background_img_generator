@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+
+<package format="2">
+  <name>video2img</name>
+  <version>1.0.0</version>
+  <description>The 'video2img' ROS package provides conversion from video to img.</description>
+
+  <maintainer email="hasegawa.shoichi@em.ci.ritsumei.ac.jp">Shoichi Hasegawa</maintainer>
+  <license>MIT</license>
+  <url type="website">https://gitlab.com/emlab/packages/video2img</url>
+  <author email="hasegawa.shoichi@em.ci.ritsumei.ac.jp">Shoichi Hasegawa</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+</package>
