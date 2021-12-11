@@ -23,7 +23,7 @@ class Rosbag2Img():
 
     def rosbag2img(self):
         pass
-        ## 構築中
+        ### 構築中
 
 if __name__ == "__main__":
     rospy.init_node('rosbag2img')
