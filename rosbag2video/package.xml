@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+
+<package format="2">
+  <name>rosbag2video</name>
+  <version>1.0.0</version>
+  <description>The 'rosbag2video' ROS package provides conversion from rosbag to video.</description>
+
+  <maintainer email="hasegawa.shoichi@em.ci.ritsumei.ac.jp">Shoichi Hasegawa</maintainer>
+  <license>MIT</license>
+  <url type="website">https://gitlab.com/emlab/packages/rosbag2video</url>
+  <author email="hasegawa.shoichi@em.ci.ritsumei.ac.jp">Shoichi Hasegawa</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+</package>
