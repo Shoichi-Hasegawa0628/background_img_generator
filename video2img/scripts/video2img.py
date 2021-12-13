@@ -35,6 +35,6 @@ class Video2Img():
 
 
 if __name__ == "__main__":
-    rospy.init_node('video2img')
+    # rospy.init_node('video2img')
     video2img = Video2Img()
     video2img.save_4times_frames('../../data/video/background.mp4', '../../data/img')
