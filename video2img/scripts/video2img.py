@@ -4,6 +4,7 @@
 # Standard Library
 import cv2
 import os
+import sys
 
 # Third Party
 import rospy
@@ -37,4 +38,7 @@ class Video2Img():
 if __name__ == "__main__":
     # rospy.init_node('video2img')
     video2img = Video2Img()
-    video2img.save_4times_frames('../../data/video/background.mp4', '../../data/img')
+    arg1 = sys.argv[1]
+    arg2 = sys.argv[2]
+    # video2img.save_4times_frames('../../data/video/background.mp4', '../../data/img')
+    video2img.save_4times_frames(arg1, arg2)
