@@ -16,7 +16,7 @@ folders = os.listdir(path + '/rosbag')
 for folder in folders:
     if os.path.isdir(os.path.join(path + '/rosbag', folder)):
         folder_list.append(folder)
-        # print(folder_list)
+        print(folder_list)
 sorted_folder_list = sorted(folder_list)
 
 # 1地点づつmp4と画像を取得し, 保存
