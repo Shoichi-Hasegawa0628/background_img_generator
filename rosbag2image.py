@@ -28,6 +28,10 @@ for i in tqdm(range(len(sorted_folder_list))):
     for j in tqdm(range(len(sorted_file_list))):
         # print(sorted_file_list[j])
         # Start rosbag2video.py using subprocess
+        if not os.path.exists(path + '/video/{}'.format(sorted_folder_list[i])):
+            os.makedirs(path + '/video/{}'.format(sorted_folder_list[i]))
+        if not os.path.exists(path + '/image/{}'.format(sorted_folder_list[i])):
+            os.makedirs(path + '/image/{}'.format(sorted_folder_list[i]))
         rosbag2video_process = subprocess.Popen(['python3',
                                                  "/root/HSR/catkin_ws/src/background_img_generator/rosbag2video/scripts/rosbag2video.py",
                                                  '--fps', '30',

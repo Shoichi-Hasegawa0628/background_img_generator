@@ -28,13 +28,16 @@ for i in tqdm(range(len(sorted_folder_list))):
     for j in range(len(sorted_file_list)):
         # print(sorted_file_list[j])
         command = ["rostopic", "echo", "-b", path + '/rosbag/{}/{}'.format(sorted_folder_list[i], sorted_file_list[j]), "-p", topic_name]
+        if not os.path.exists(path + '/position/{}'.format(sorted_folder_list[i])):
+            os.makedirs(path + '/position/{}'.format(sorted_folder_list[i]))
         with open(path + '/position/{}/{}.csv'.format(sorted_folder_list[i], sorted_file_list[j].replace('.bag', '')), "wb") as f:
             subprocess.run(command, stdout=f)
 
 # position_exp.csvの作成 (6データずつ) → 180
 # [living → kitchen → study_room → bedroom → bathroom → entrance] for jcmsi
 # [living → kitchen → toy_room] for robocup2023
-order_list = ["living", "kitchen", "toy_room"]
+# # [living → kitchen → bedroom → bathroom] for rsj2023
+order_list = ["living", "kitchen", "bedroom", "bathroom"]
 for i in tqdm(range(len(order_list))):
     file_list = []
     target_path = path + "/position/"+ order_list[i]
